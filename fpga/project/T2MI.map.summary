@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Wed Aug 12 08:42:33 2015
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : T2MI
+Top-level Entity Name : T2MI
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 50
+Total pins : 131
+Total virtual pins : 0
+Total block memory bits : 16,400
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI TX Channels : 0
+Total PLLs : 1
+Total DLLs : 0

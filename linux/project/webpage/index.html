@@ -1,0 +1,51 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>T2-MI-MODULATOR</title>
+	<link rel="stylesheet" href="page_css.css">
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+
+		$(function(){
+			$('h4.send_command').click(function(){
+				var senddata={command:''};
+				var string_teg=""+this.innerHTML;
+				if ( string_teg.indexOf("START")+1) {senddata.command="start";}
+				else if ( string_teg.indexOf("STOP")+1) {senddata.command="stop";}
+				else if ( string_teg.indexOf("RESTART")+1) { senddata.command="restart";}
+				else if ( string_teg.indexOf("TEST 1 - send test message")+1) { senddata.command="test_1";}
+				console.log(senddata);
+				var local = window.location;
+				var net_string = local.protocol+"//"+local.host;
+				$.getJSON(net_string,JSON.stringify(senddata),function(data){
+		    		console.log(data);
+		    	});
+
+				
+
+			});
+		});
+
+	</script>
+</head>
+<body>
+	 
+	<div >
+		<h3>T2-MI modulator</h3>
+
+		<h4 class="but_states send_command">START</h4>	
+		<h4 class="but_states send_command">STOP</h4>
+		<h4 class="but_states send_command">RESTART</h4>
+		<h4 class="but_states send_command">TEST 1 - send test message </h4>
+
+		
+		<!--
+		<h4><a href="info.html">Info</a></h4>
+		<h4><a href="settings.html">Settings</a></h4>
+		<h4><a href="debugging.html">Debug</a></h4>
+		<h4><a href="test.html">Testbench</a></h4>
+		-->
+	</div>
+</body>
+</html>

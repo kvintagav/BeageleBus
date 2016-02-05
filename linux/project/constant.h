@@ -1,0 +1,7 @@
+#define START_PORT 	8000
+#define END_PORT 	16000
+
+#define BUFFER_FILE_SIZE	64
+#define BUFFER_SIZE  		1600
+#define MAX_MOUNT_MESS	10000	
+	
